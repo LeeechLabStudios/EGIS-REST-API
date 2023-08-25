@@ -1,6 +1,4 @@
-EGIS REST API
-#
-EraGuessr_ImageSearch
+EGIS REST API (EraGuessr_ImageSearch)
 #
 By Yellow63, LeeechLab Backend
 # 
