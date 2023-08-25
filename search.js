@@ -16,7 +16,7 @@ app.get('/',async function(req, res){
         console.log("      >>>Data Received: [Year: "+year+", P1: "+p1+", P2: "+p2+"]")
         const links = await search(parseInt(year));
         res.send({
-        'payload': [p1,p2,links]
+        'payload': [p1,p2,year,links]
         });
     }
 });
