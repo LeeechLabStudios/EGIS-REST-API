@@ -10,14 +10,24 @@ app.get('/',async function(req, res){
     const p1 = req.query.p1;
     const p2 = req.query.p2;
     const year = req.query.year;
-    if (year == undefined || p1 == undefined){
-        console.log("      >>>Data Received: ERROR: (Data is Malformed) [Year: "+year+", P1: "+p1+", P2: "+p2+"]\n      >Data ignored");
-    }else{
-        console.log("      >>>Data Received: [Year: "+year+", P1: "+p1+", P2: "+p2+"]")
-        const links = await search(parseInt(year));
+    const tick = req.query.tick;
+    if (tick == "yesTICK"){
+        console.log("            >tick");
         res.send({
-        'payload': [p1,p2,year,links]
+            'payload': [],
+            'tick': ["yt"]
         });
+    }else{
+        if (year == undefined || p1 == undefined){
+            console.log("      >>>Data Received: ERROR: (Data is Malformed) [Year: "+year+", P1: "+p1+", P2: "+p2+"]\n      >Data ignored");
+        }else{
+            console.log("      >>>Data Received: [Year: "+year+", P1: "+p1+", P2: "+p2+"]")
+            const links = await search(parseInt(year));
+            res.send({
+                'payload': [p1,p2,year,links],
+                'tick': ["nt"]
+            });
+        }
     }
 });
 
