@@ -4,7 +4,7 @@ const googleSearchCredentials = require('/etc/secrets/credentials.json')
 const express = require('express');
 
 const app = express();
-const port = 2828;
+const port = process.env.PORT || 10000;
 
 app.get('/',async function(req, res){
     const p1 = req.query.p1;
