@@ -1,7 +1,6 @@
 const google = require('googleapis').google
 const customSearch = google.customsearch('v1');
 const googleSearchCredentials = require('/etc/secrets/credentials.json')
-const WebSocket = require('ws');
 const express = require('express');
 
 const app = express();
