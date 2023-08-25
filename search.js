@@ -1,6 +1,6 @@
 const google = require('googleapis').google
 const customSearch = google.customsearch('v1');
-const googleSearchCredentials = require('C:/Users/Fernando/Documents/ERAGUESS/EraGuessr_ImageSearcher/credentials.json')
+const googleSearchCredentials = require('/etc/secrets/credentials.json')
 const WebSocket = require('ws');
 const express = require('express');
 
@@ -19,7 +19,7 @@ app.get('/',async function(req, res){
 });
 
 app.listen(port);
-console.log('\n\n---------[  EGIS REST API  ]---------\n\nEraGuessr_ImageSearcher is Online\n      >  ctrl+c to cancel\n      >  Authors: Yellow63, LeeechLab Backend\n      >  Run: 127.0.0.1:' + port+"?year=YEAR&p1=P1&p2=P2");
+console.log('\n\n---------[  EGIS REST API  ]---------\n\nEraGuessr_ImageSearcher is Online\n      >  ctrl+c to cancel\n      >  Authors: Yellow63, LeeechLab Backend');
 console.log('\n[EGIS] Console Logs:');
 async function search(year){
     var type = " image ";
