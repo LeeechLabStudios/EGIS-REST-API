@@ -1,8 +1,8 @@
 ---------[  EGIS REST API  ]---------
 
 EraGuessr_ImageSearcher
->   Authors: Yellow63, LeeechLab Backend
->   This script is an API designed to fetch images
+- Authors: Yellow63, LeeechLab Backend
+- This script is an API designed to fetch images
 
 
 PLAY ERA GUESSR FOR FREE!
