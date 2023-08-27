@@ -35,7 +35,7 @@ app.listen(port);
 console.log('\n\n---------[  EGIS REST API  ]---------\n\nEraGuessr_ImageSearcher is Online\n      >  ctrl+c to cancel\n      >  Authors: Yellow63, LeeechLab Backend');
 console.log('\n[EGIS] Console Logs:');
 async function search(year){
-    var type = " image ";
+    var type = " media ";
     if (year == 911){
         year = 912;
     }
@@ -43,12 +43,12 @@ async function search(year){
         type = "photograph";
     }else{
         if (year < 600){
-            type = "statue";
+            type = "sculpture";
         }else{
             type = "painting";
         }
     }
-    const content = "year "+year.toString()+" "+type+" wikipedia";
+    const content = "year-"+year.toString()+" "+type+" wikimedia-commons";
     const returns = await GoogleFIRL(content);
     async function GoogleFIRL(query){
         const response = await customSearch.cse.list({
